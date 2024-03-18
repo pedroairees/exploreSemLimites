@@ -28,22 +28,24 @@ header > img{
     margin-bottom: 1.7rem;
 }
 
-header > h1{
+header > div > h1{
     color: var(--pink-font);
     font-size: 3.2rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
 }
 
-header > p{
+header > div > p{
     color: var(--blue-font);
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 3.5rem;
 }
 
-header > a{
-    margin-bottom: 9.3rem;
+header > div > a{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 9.3rem;
 }
 
 .cards{
@@ -171,7 +173,7 @@ fieldset{
 }
 
 footer{
-    height: 13rem;
+    height: 1rem;
 }
 
 footer p{
@@ -180,4 +182,86 @@ footer p{
     text-align: center;
     font-size: 1.9rem;
     font-weight: 600;
+}
+
+.effects-contact{
+    display: none;
+}
+
+.img-desk{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    header{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding-bottom: 6rem;
+    }
+   
+    .img-mobi{
+        display: none;
+    }
+
+    .img-desk{
+        display: block;
+    }
+
+    .buton-seta{
+        display: block;
+        margin-top: 16rem;
+        padding-bottom: 0;
+    }
+
+    header > div > h1{
+        font-size: 5.8rem;
+    }
+
+    header > div > p{
+        font-size: 3.2rem;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 6.4rem 0;
+    }
+
+    .cards > div:nth-child(1){
+        margin-top: 0;
+    }
+    
+    .cards > div:nth-child(3){
+        margin-bottom: 0;
+    }
+  
+
+    .contact > form > fieldset > input{
+        margin: 1.5rem 4rem;
+        width: 59.2rem;
+    }
+
+    .contact > form > fieldset > legend{
+        padding-bottom: 3.0rem;
+    }
+
+    .contact{
+        padding-left: 30rem;
+        height: 600px;
+        background-image: url(./assets/contact-effects-desk.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .effects-contact{
+        display: block;
+        position: relative;
+        width: 40%;
+        height: 40%;
+        left: 60%;
+        bottom: 540px;
+    }
+
+    footer{
+        height: 50px;
+    }
 }
